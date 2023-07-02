@@ -26,14 +26,16 @@ rbenv global 3.2.2
 # Install bundler and project dependencies
 gem install bundler
 rbenv rehash
-bundle install
 
 # Open port 8080
 sudo ufw allow 8080
 
 # Clone the repository
 git clone https://github.com/ProudCircle/WebServer.git
-cd WebServer
+cd WebServer/src
+
+# Install gems
+bundle install
 
 # Run the web server on port 8080
 rails server -p 8080
